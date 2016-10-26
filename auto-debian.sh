@@ -106,9 +106,9 @@ iptables -t nat -A POSTROUTING -s 172.1.0.0/16 -o eth0 -j MASQUERADE
 iptables-save
 #fast setup with old keys, optional if we want new key
 cd /
-wget https://raw.githubusercontent.com/abangG/sshvpnscript/master/script/ovpn.tar
-tar -xvf ovpn.tar
-rm ovpn.tar
+wget https://raw.githubusercontent.com/MappakkoE/autoscript/master/openvpn.tar
+tar -xvf openvpn.tar
+rm openvpn.tar
 service openvpn-nl restart
 openvpn-nl --remote CLIENT_IP --dev tun0 --ifconfig 10.9.8.1 10.9.8.2
 #get ip address
@@ -164,17 +164,6 @@ cd
 wget https://raw.githubusercontent.com/abangG/sshvpnscript/master/script/swap-ram.sh
 chmod +x  swap-ram.sh
 ./swap-ram.sh
-
-clear
-
-echo "
-BLOCK TORRENT PORT INSTALL
-COMPLETE 95%
-"
-#bonus block torrent
-wget https://raw.githubusercontent.com/MappakkoE/master/master/torrent.sh
-chmod +x  torrent.sh
-./torrent.sh
 
 clear
 echo "
