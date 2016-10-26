@@ -212,11 +212,6 @@ chmod +x user-expire.sh
 chmod +x user-limit.sh
 chmod +x limit.sh
 
-#bonus block torrent
-wget https://raw.githubusercontent.com/MappakkoE/master/master/torrent.sh
-chmod +x  torrent.sh
-./torrent.sh
-
 # finalisasi
 chown -R www-data:www-data /home/vps/public_html
 service nginx start
